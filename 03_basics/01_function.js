@@ -1,4 +1,11 @@
+//#fucntion are two types 
+//1st using below the code
+//2nd array function is easy to use and write the code
 
+//array function examples like
+// addtwonum (a,b) => ({
+//     return a+b
+// });
 
 function sayMyName(){
 
