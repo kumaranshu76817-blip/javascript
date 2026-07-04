@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital local time</title>
+    <style>
+        nav{
+            background-color: rgb(118, 118, 228);
+            padding: 15px;
+            text-align: center;
+
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        nav a:hover{
+            color: yellow;
+        }
+        body{
+            background-color: #212122;
+            color: #fff;
+        }
+        .center{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #clock{
+            font-size: 40px;
+            background-color: orange;
+            padding: 20px 50px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a target="_blank" href="https://github.com/kumaranshu76817-blip">youtube channel</a>
+    </nav>
+    <div class="center">
+        <div id="banner"><span>Your local time</span></div>
+        <div id="clock"></div>
+    </div>
+    <script src="anshu.js"></script>
+</body>
+</html>
