@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h2>Amazin images</h2>
+    <ul id="images">
+        <li><img width="200px" id="photoshop" src="WhatsApp Image 2026-06-30 at 10.10.29 AM.jpeg"  alt="photoshop"></li>
+        <li> <img width="200px" id="japan" src="WhatsApp Image 2026-06-30 at 10.10.30 AM (1).jpeg" alt=""></li>
+        <li><img width="200px" id="river" src="WhatsApp Image 2026-06-30 at 9.34.42 AM (1).jpeg" alt=""></li>
+        <li><img width="200px" id="owl" src="WhatsApp Image 2026-06-30 at 9.34.42 AM (2).jpeg" alt=""></li>
+        <li><img width="200px" id="prayer" src="WhatsApp Image 2026-06-30 at 9.34.42 AM (2).jpeg" alt=""></li>
+        <li><a href="http://google.com" id="google">Google</a></li>
+    </ul>
+</body>
+    <script>
+        // document.getElementById('owl').onclick = function(){
+        //     alert("owl clicked")
+        // }
+
+
+        //attachevent method used early time 
+        //jQuery ka bhaut fans hota hai .onListner
+
+        document.getElementById('owl').addEventListener('click',function(){
+            alert("owl clicked again")
+        })
+
+        
+
+        //eventObject ke baat karte hai
+        document.getElementById('owl').addEventListener('click',function(e){
+            console.log(e);
+            
+        },false)
+        //type, timestamp,defaultPrevented
+        //target, toElement, //source element, currentTarget
+        //clientX,clientY, screeX, scrreNy
+        //altkey, ctrylkey, shiftkey , keycode
+
+
+        //eventprogpation
+    //     document.getElementByI('google').addEventListener('click',function(e){
+    //         e.prventDefault();
+    //         e.stopProgation()
+    //         console.log("google clicked");
+            
+    //    },false)
+
+
+       //image gayab karna hai
+       //ul ko approch karenge kyki baut image hoga ko smabl lenge
+       document.querySelector('#images').addEventListener('click',function(e) {
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            //isliye if else lagaya kyoki li pe click karnse pura picture gyab na ho jaye
+            //isliye me use kiya hai
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+
+        // let removeIt = e.target.parentNode
+        // removeIt.remove() //first method
+
+
+        // removeIt.parentNode.removeChild(removeIt) //second method
+
+        
+       })
+
+
+    </script>
+</html>

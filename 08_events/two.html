@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>anshu</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //set timeout means ek baar chalenge intna time me
+    //set interval me hota hai ki mai har time limit ke baad repat honge
+
+    const sayAnshu = function () {
+        console.log("anshu");
+        
+    }
+    // document.querySelector('h1').innerHTML = "best volleyball player"
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best volleyball player"
+    }
+    const changeMe = setTimeout(changeText,2000)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+        
+    })
+    //#clear timout means button click karne pe stopped ho jayega
+    // clearTimeout(changeMe)
+</script>
+</html>
